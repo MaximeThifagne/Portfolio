@@ -1,0 +1,12 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "vetur.validation.template": true,
+  "javascript.format.enable": true,
+  "vetur.validation.script": false,
+  "typescript.validate.enable": false,
+  "vetur.format.defaultFormatter.html": "prettyhtml"
+}
