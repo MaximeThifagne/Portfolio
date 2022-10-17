@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="onClick()">notyification</button>
+    <v-btn @click="onClick()">notyification</v-btn>
   </div>
 </template>
 
