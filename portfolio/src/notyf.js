@@ -11,7 +11,7 @@ const notification = new Notyf({
   types: [
     {
       type: "success",
-      background: "linear-gradient(to right, darkgreen, limegreen )",
+      background: "linear-gradient(to right, #2E7D32, #4CAF50 )",
       dismissible: true,
       icon: {
         className: "material-icons",
