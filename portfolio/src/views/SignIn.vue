@@ -1,27 +1,13 @@
 <template>
   <div
-    class="sign-up d-flex flex-wrap flex-direction-column justify-space-around"
+    class="sign-in d-flex flex-wrap flex-direction-column justify-space-around"
   >
-    <v-card flat class="sign-up-card align-self-start mt-16">
-      <v-card-title class="justify-center"> <h2>Sign Up</h2></v-card-title>
+    <v-card flat class="sign-in-card align-self-start mt-16">
+      <v-card-title class="justify-center"> <h2>Sign in</h2></v-card-title>
       <v-card-subtitle class="mt-4">
-        Already has an account ? <a href="#">Sign in</a>
+        New here ? <a href="#">Create an account for free</a>
       </v-card-subtitle>
       <v-form>
-        <v-text-field
-          v-model="firstName"
-          outlined
-          label="FirstName *"
-          type="text"
-          class="ml-4 mr-4"
-        ></v-text-field>
-        <v-text-field
-          v-model="lastName"
-          outlined
-          label="Last name *"
-          type="text"
-          class="ml-4 mr-4"
-        ></v-text-field>
         <v-text-field
           v-model="email"
           outlined
@@ -42,7 +28,7 @@
         </v-text-field>
         <div class="ml-4 mr-4">
           <v-btn
-            class="mb-4 sign-up-btn"
+            class="mb-4 sign-in-btn"
             block
             rounded
             large
@@ -66,10 +52,6 @@
           </v-btn>
         </div>
       </v-form>
-      <v-card-subtitle>
-        By continuing, you agree to the <a href="#">Terms & Conditions</a> and
-        <a href="#">Privacy Policy</a>
-      </v-card-subtitle>
     </v-card>
   </div>
 </template>
@@ -115,7 +97,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sign-up {
+.sign-in {
   width: 100%;
   height: 100%;
   background-color: rgb(250, 244, 235);
@@ -124,11 +106,11 @@ export default {
   background-image: url("@/assets/background.png");
 }
 
-.sign-up-text {
+.sign-in-text {
   width: 40%;
 }
 
-.sign-up-card {
+.sign-in-card {
   width: 40%;
 }
 

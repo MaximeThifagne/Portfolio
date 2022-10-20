@@ -3,7 +3,8 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/signUp">Sign Up</router-link>
+      <router-link to="/signUp">Sign Up</router-link> |
+      <router-link to="/signIn">Sign In</router-link>
     </nav>
     <router-view />
   </v-app>
