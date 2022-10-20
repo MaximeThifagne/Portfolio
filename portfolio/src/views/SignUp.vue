@@ -5,7 +5,7 @@
     <v-card flat class="sign-up-card align-self-start mt-16">
       <v-card-title class="justify-center"> <h2>Sign Up</h2></v-card-title>
       <v-card-subtitle class="mt-4">
-        Already has an account ? <a href="#">Sign in</a>
+        Already has an account ? <a @click="goToSignIn">Sign in</a>
       </v-card-subtitle>
       <v-form>
         <v-text-field
@@ -101,11 +101,16 @@ export default {
     },
   },
   methods: {
+    goToSignIn() {
+      this.$router.push("/signIn");
+    },
     signUp() {
       this.$notification.open({
         type: "success",
-        message: "Oui tu t'es bien connecter",
+        message: "Account created sucessfully, you con now sign in",
       });
+
+      this.$router.push("/signIn");
     },
     changeShowPassword() {
       this.showPassword = !this.showPassword;

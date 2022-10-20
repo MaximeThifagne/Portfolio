@@ -5,7 +5,8 @@
     <v-card flat class="sign-in-card align-self-start mt-16">
       <v-card-title class="justify-center"> <h2>Sign in</h2></v-card-title>
       <v-card-subtitle class="mt-4">
-        New here ? <a href="#">Create an account for free</a>
+        New here ?
+        <a @click="goTosignUp">Create an account for free</a>
       </v-card-subtitle>
       <v-form>
         <v-text-field
@@ -33,7 +34,7 @@
             rounded
             large
             color="primary"
-            @click="signUp"
+            @click="signIn"
           >
             Sign up
           </v-btn>
@@ -83,11 +84,15 @@ export default {
     },
   },
   methods: {
-    signUp() {
+    goTosignUp() {
+      this.$router.push("/signUp");
+    },
+    signIn() {
       this.$notification.open({
         type: "success",
         message: "Oui tu t'es bien connecter",
       });
+      this.$router.push("/home");
     },
     changeShowPassword() {
       this.showPassword = !this.showPassword;
