@@ -1,14 +1,34 @@
 <template>
   <v-app id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/signUp">Sign Up</router-link> |
-      <router-link to="/signIn">Sign In</router-link>
+      <router-link :to="{ name: 'home', params: { lang: $i18n.locale } }"
+        >Home</router-link
+      >
+      |
+      <router-link :to="{ name: 'about', params: { lang: $i18n.locale } }"
+        >About</router-link
+      >
+      |
+      <router-link :to="{ name: 'signIn', params: { lang: $i18n.locale } }"
+        >Sign Up</router-link
+      >
+      |
+      <router-link :to="{ name: 'signUp', params: { lang: $i18n.locale } }"
+        >Sign In</router-link
+      >
+      <LocaleSwitcher />
     </nav>
-    <router-view />
+    <router-view></router-view>
   </v-app>
 </template>
+
+<script>
+import LocaleSwitcher from "./components/LocaleSwitcher.vue";
+export default {
+  name: "App",
+  components: { LocaleSwitcher },
+};
+</script>
 
 <style lang="scss">
 #app {

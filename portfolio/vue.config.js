@@ -1,6 +1,15 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
-  transpileDependencies: [
-    'vuetify'
-  ]
-})
+  runtimeCompiler: true,
+  transpileDependencies: ["vuetify"],
+
+  pluginOptions: {
+    i18n: {
+      locale: "en",
+      fallbackLocale: "fr",
+      localeDir: "locales",
+      enableInSFC: false,
+      enableBridge: false,
+    },
+  },
+});

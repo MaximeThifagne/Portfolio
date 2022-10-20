@@ -3,7 +3,9 @@
     class="sign-in d-flex flex-wrap flex-direction-column justify-space-around"
   >
     <v-card flat class="sign-in-card align-self-start mt-16">
-      <v-card-title class="justify-center"> <h2>Sign in</h2></v-card-title>
+      <v-card-title class="justify-center">
+        <h2>Sign in {{ $t("message") }}</h2></v-card-title
+      >
       <v-card-subtitle class="mt-4">
         New here ?
         <a @click="goTosignUp">Create an account for free</a>
