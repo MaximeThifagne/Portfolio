@@ -10,7 +10,11 @@
       "SIGN_IN" : "Sign in",
       "FIRST_NAME" : "First name",
       "LAST_NAME" : "Last name",
-      "AND": "and"
+      "AND": "and",
+      "TERMS": "Terms and conditions",
+      "PRIVACY" :"Private policy",
+      "COOKIES" : "Cookies policy",
+      "PLAN" : "Site plan"
   },
   "signin" : {
     "NEW_HERE" : "New here ?",

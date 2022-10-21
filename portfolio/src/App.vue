@@ -27,15 +27,17 @@
         </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <router-view class="content"></router-view>
+    <FooterView />
   </v-app>
 </template>
 
 <script>
 import LocaleSwitcher from "./components/LocaleSwitcher.vue";
+import FooterView from "./views/FooterView.vue";
 export default {
   name: "App",
-  components: { LocaleSwitcher },
+  components: { LocaleSwitcher, FooterView },
 };
 </script>
 
@@ -64,5 +66,9 @@ nav {
 
 .switcher {
   width: 150px;
+}
+
+.content {
+  min-height: calc(100vh - 86px) !important;
 }
 </style>
