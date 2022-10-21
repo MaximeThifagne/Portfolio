@@ -93,14 +93,20 @@ export default {
   },
   methods: {
     goTosignUp() {
-      this.$router.push("/signUp");
+      this.$router.push({
+        name: "signUp",
+        params: { lang: this.$i18n.locale },
+      });
     },
     signIn() {
       this.$notification.open({
         type: "success",
         message: "Oui tu t'es bien connecter",
       });
-      this.$router.push("/home");
+      this.$router.push({
+        name: "home",
+        params: { lang: this.$i18n.locale },
+      });
     },
     changeShowPassword() {
       this.showPassword = !this.showPassword;

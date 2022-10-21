@@ -118,7 +118,10 @@ export default {
   },
   methods: {
     goToSignIn() {
-      this.$router.push("/signIn");
+      this.$router.push({
+        name: "signIn",
+        params: { lang: this.$i18n.locale },
+      });
     },
     signUp() {
       this.$notification.open({
@@ -126,7 +129,10 @@ export default {
         message: "Account created sucessfully, you con now sign in",
       });
 
-      this.$router.push("/signIn");
+      this.$router.push({
+        name: "signIn",
+        params: { lang: this.$i18n.locale },
+      });
     },
     changeShowPassword() {
       this.showPassword = !this.showPassword;
