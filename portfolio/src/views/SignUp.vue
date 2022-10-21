@@ -2,7 +2,7 @@
   <div
     class="sign-up d-flex flex-wrap flex-direction-column justify-space-around"
   >
-    <v-card flat class="sign-up-card align-self-start mt-16">
+    <v-card flat class="sign-up-card align-self-center">
       <v-card-title class="justify-center">
         <h2>{{ $t("signup.SIGN_UP") }}</h2></v-card-title
       >

@@ -10,7 +10,11 @@
         "SIGN_IN" : "Se connecter",
         "FIRST_NAME" : "Prénom",
         "LAST_NAME" : "Nom",
-        "AND": "et"
+        "AND": "et",
+        "TERMS": "Conditions générales",
+      "PRIVACY" :"Politique de confidentialité",
+      "COOKIES" : "Politique des cookies",
+      "PLAN" : "Plan du site"
     },
     "signin" : {
       "NEW_HERE" : "Nouveau ici ?",
