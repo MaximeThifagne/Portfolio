@@ -1,43 +1,62 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import i18n from "../i18n";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: `/:locale`,
+    component: {
+      template: "<router-view/>",
+    },
+    beforeEnter: (to, from, next) => {
+      const locale = to.params.lang;
+      console.log(to.params.lang);
+      const supported_locales =
+        process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(","); // 2
+      if (!supported_locales.includes(locale)) return next("en"); // 3
+      if (i18n.locale !== locale) {
+        i18n.locale = locale;
+      }
+      return next(); // 5
+    },
+    children: [
+      {
+        path: "",
+        name: "home",
+        component: load("HomeView"),
+      },
+      {
+        path: "/about",
+        name: "about",
+
+        component: load("AboutView"),
+      },
+      {
+        path: "/signUp",
+        name: "signUp",
+        component: load("SignUp"),
+      },
+      {
+        path: "/signIn",
+        name: "signIn",
+        component: load("SignIn"),
+      },
+    ],
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-  {
-    path: "/signUp",
-    name: "signUp",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SignUp.vue"),
-  },
-  {
-    path: "/signIn",
-    name: "signIn",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SignIn.vue"),
+    path: "*",
+    redirect() {
+      return process.env.VUE_APP_I18N_LOCALE;
+    },
   },
 ];
+
+function load(component) {
+  console.log(component);
+  return () => import(`../views/${component}.vue`);
+}
 
 const router = new VueRouter({
   mode: "history",

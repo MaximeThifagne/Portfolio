@@ -1,0 +1,26 @@
+{
+    "nav" : {
+        "HOME": "Accueil",
+        "ABOUT": "A propos",
+        "SIGN_UP" : "S'enregistrer"
+    },
+    "common" : {
+        "EMAIL" : "Email",
+        "PASSWORD": "Mots de passe",
+        "SIGN_IN" : "Se connecter",
+        "FIRST_NAME" : "Prénom",
+        "LAST_NAME" : "Nom",
+        "AND": "et"
+    },
+    "signin" : {
+      "NEW_HERE" : "Nouveau ici ?",
+      "CREATE_ACCOUNT" : "Créer un compte gratuitement"
+    },
+    "signup" : {
+        "SIGN_UP" : "Créer un compte",
+        "HAS_ACCOUNT": "Déjà un compte ?",
+        "CONTINUING" : "En continuant, vous accéptez les",
+        "TERMS" : "Termes et conditions",
+        "PRIVACY": "Politique de confidentialité"
+    }
+  }

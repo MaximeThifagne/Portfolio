@@ -3,23 +3,25 @@
     class="sign-in d-flex flex-wrap flex-direction-column justify-space-around"
   >
     <v-card flat class="sign-in-card align-self-start mt-16">
-      <v-card-title class="justify-center"> <h2>Sign in</h2></v-card-title>
+      <v-card-title class="justify-center">
+        <h2>{{ $t("common.SIGN_IN") }}</h2></v-card-title
+      >
       <v-card-subtitle class="mt-4">
-        New here ?
-        <a @click="goTosignUp">Create an account for free</a>
+        {{ $t("signin.NEW_HERE") }}
+        <a @click="goTosignUp">{{ $t("signin.CREATE_ACCOUNT") }}</a>
       </v-card-subtitle>
       <v-form>
         <v-text-field
           v-model="email"
           outlined
-          label="Email *"
+          :label="emailLabel"
           type="email"
           class="ml-4 mr-4"
         ></v-text-field>
         <v-text-field
           v-model="password"
           outlined
-          label="Password *"
+          :label="passwordLabel"
           class="ml-4 mr-4"
           :type="passwordType"
         >
@@ -36,7 +38,7 @@
             color="primary"
             @click="signIn"
           >
-            Sign up
+            {{ $t("common.SIGN_IN") }}
           </v-btn>
         </div>
         <div
@@ -82,17 +84,29 @@ export default {
         return "password";
       }
     },
+    emailLabel() {
+      return this.$t("common.EMAIL") + " *";
+    },
+    passwordLabel() {
+      return this.$t("common.PASSWORD") + " *";
+    },
   },
   methods: {
     goTosignUp() {
-      this.$router.push("/signUp");
+      this.$router.push({
+        name: "signUp",
+        params: { lang: this.$i18n.locale },
+      });
     },
     signIn() {
       this.$notification.open({
         type: "success",
         message: "Oui tu t'es bien connecter",
       });
-      this.$router.push("/home");
+      this.$router.push({
+        name: "home",
+        params: { lang: this.$i18n.locale },
+      });
     },
     changeShowPassword() {
       this.showPassword = !this.showPassword;

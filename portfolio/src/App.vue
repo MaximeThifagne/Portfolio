@@ -1,14 +1,43 @@
 <template>
   <v-app id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/signUp">Sign Up</router-link> |
-      <router-link to="/signIn">Sign In</router-link>
+      <div class="d-flex justify-space-between">
+        <div class="align-self-start mt-2">
+          <router-link :to="{ name: 'home', params: { lang: $i18n.locale } }">{{
+            $t("nav.HOME")
+          }}</router-link>
+          |
+          <router-link
+            :to="{ name: 'about', params: { lang: $i18n.locale } }"
+            >{{ $t("nav.ABOUT") }}</router-link
+          >
+          |
+          <router-link
+            :to="{ name: 'signIn', params: { lang: $i18n.locale } }"
+            >{{ $t("common.SIGN_IN") }}</router-link
+          >
+          |
+          <router-link
+            :to="{ name: 'signUp', params: { lang: $i18n.locale } }"
+            >{{ $t("nav.SIGN_UP") }}</router-link
+          >
+        </div>
+        <div class="switcher align-self-end">
+          <LocaleSwitcher />
+        </div>
+      </div>
     </nav>
-    <router-view />
+    <router-view></router-view>
   </v-app>
 </template>
+
+<script>
+import LocaleSwitcher from "./components/LocaleSwitcher.vue";
+export default {
+  name: "App",
+  components: { LocaleSwitcher },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -20,7 +49,8 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 20px 20px 0px 20px;
+  width: 100%;
 
   a {
     font-weight: bold;
@@ -30,5 +60,9 @@ nav {
       color: #42b983;
     }
   }
+}
+
+.switcher {
+  width: 150px;
 }
 </style>
