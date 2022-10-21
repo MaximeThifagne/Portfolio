@@ -1,9 +1,14 @@
 <template>
-  <ul>
-    <li v-for="locale in locales" :key="locale" @click="switchLocale(locale)">
-      {{ locale }}
-    </li>
-  </ul>
+  <v-select
+    v-model="locale"
+    outlined
+    :items="locales"
+    item-text="libelle"
+    item-value="code"
+    @change="switchLocale"
+    dense
+  >
+  </v-select>
 </template>
 
 <script>
@@ -11,7 +16,19 @@ export default {
   name: "LocaleSwitcher",
   data() {
     return {
-      locales: process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(","),
+      locales: [
+        {
+          code: "fr",
+          libelle: "Français",
+          icon: "mdi-home",
+        },
+        {
+          code: "en",
+          libelle: "English",
+          icon: "mdi-home-account",
+        },
+      ],
+      locale: "fr",
     };
   },
   methods: {
@@ -26,10 +43,4 @@ export default {
 };
 </script>
 
-<style scoped>
-li {
-  text-decoration: underline;
-  color: #459ce7;
-  cursor: pointer;
-}
-</style>
+<style scoped></style>

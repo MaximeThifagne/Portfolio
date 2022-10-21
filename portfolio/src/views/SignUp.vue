@@ -3,36 +3,39 @@
     class="sign-up d-flex flex-wrap flex-direction-column justify-space-around"
   >
     <v-card flat class="sign-up-card align-self-start mt-16">
-      <v-card-title class="justify-center"> <h2>Sign Up</h2></v-card-title>
+      <v-card-title class="justify-center">
+        <h2>{{ $t("signup.SIGN_UP") }}</h2></v-card-title
+      >
       <v-card-subtitle class="mt-4">
-        Already has an account ? <a @click="goToSignIn">Sign in</a>
+        {{ $t("signup.HAS_ACCOUNT") }}
+        <a @click="goToSignIn">{{ $t("common.SIGN_IN") }}</a>
       </v-card-subtitle>
       <v-form>
         <v-text-field
           v-model="firstName"
           outlined
-          label="FirstName *"
+          :label="firstNameLabel"
           type="text"
           class="ml-4 mr-4"
         ></v-text-field>
         <v-text-field
           v-model="lastName"
           outlined
-          label="Last name *"
+          :label="lastNameLabel"
           type="text"
           class="ml-4 mr-4"
         ></v-text-field>
         <v-text-field
           v-model="email"
           outlined
-          label="Email *"
+          :label="emailLabel"
           type="email"
           class="ml-4 mr-4"
         ></v-text-field>
         <v-text-field
           v-model="password"
           outlined
-          label="Password *"
+          :label="passwordLabel"
           class="ml-4 mr-4"
           :type="passwordType"
         >
@@ -49,7 +52,7 @@
             color="primary"
             @click="signUp"
           >
-            Sign up
+            {{ $t("signup.SIGN_UP") }}
           </v-btn>
         </div>
         <div
@@ -67,8 +70,9 @@
         </div>
       </v-form>
       <v-card-subtitle>
-        By continuing, you agree to the <a href="#">Terms & Conditions</a> and
-        <a href="#">Privacy Policy</a>
+        {{ $t("signup.CONTINUING") }}
+        <a href="#">{{ $t("signup.TERMS") }}</a> {{ $t("common.AND") }}
+        <a href="#">{{ $t("signup.PRIVACY") }}</a>
       </v-card-subtitle>
     </v-card>
   </div>
@@ -98,6 +102,18 @@ export default {
       } else {
         return "password";
       }
+    },
+    firstNameLabel() {
+      return this.$t("common.FIRST_NAME") + " *";
+    },
+    lastNameLabel() {
+      return this.$t("common.LAST_NAME") + " *";
+    },
+    emailLabel() {
+      return this.$t("common.EMAIL") + " *";
+    },
+    passwordLabel() {
+      return this.$t("common.PASSWORD") + " *";
     },
   },
   methods: {
