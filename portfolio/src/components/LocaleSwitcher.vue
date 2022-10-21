@@ -1,12 +1,12 @@
 <template>
   <v-select
     v-model="locale"
+    dense
     outlined
     :items="locales"
     item-text="libelle"
     item-value="code"
     @change="switchLocale"
-    dense
   >
   </v-select>
 </template>
@@ -35,7 +35,7 @@ export default {
     switchLocale(locale) {
       if (this.$i18n.locale !== locale) {
         this.$i18n.locale = locale;
-        const to = this.$router.resolve({ params: { locale } }); // <--------------------
+        const to = this.$router.resolve({ params: { locale } });
         this.$router.push(to.location);
       }
     },

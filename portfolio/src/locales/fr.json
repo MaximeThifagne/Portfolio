@@ -2,7 +2,8 @@
     "nav" : {
         "HOME": "Accueil",
         "ABOUT": "A propos",
-        "SIGN_UP" : "S'enregistrer"
+        "SIGN_UP" : "S'enregistrer",
+        "SIGN_IN" : "Se connecter"
     },
     "common" : {
         "EMAIL" : "Email",
