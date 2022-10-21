@@ -2,7 +2,7 @@
   <div
     class="sign-in d-flex flex-wrap flex-direction-column justify-space-around"
   >
-    <v-card flat class="sign-in-card align-self-start mt-16">
+    <v-card flat class="sign-in-card align-self-center">
       <v-card-title class="justify-center">
         <h2>{{ $t("common.SIGN_IN") }}</h2></v-card-title
       >
