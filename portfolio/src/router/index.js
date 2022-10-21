@@ -6,49 +6,50 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: `/:locale`,
+    path: "/:locale",
+    name: "locale",
     component: {
       template: "<router-view/>",
     },
-    beforeEnter: (to, from, next) => {
-      const locale = to.params.lang;
-      console.log(to.params.lang);
-      const supported_locales =
-        process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(","); // 2
-      if (!supported_locales.includes(locale)) return next("en"); // 3
-      if (i18n.locale !== locale) {
-        i18n.locale = locale;
-      }
-      return next(); // 5
-    },
     children: [
       {
-        path: "",
+        path: "home",
         name: "home",
         component: load("HomeView"),
       },
       {
-        path: "/about",
+        path: "about",
         name: "about",
 
         component: load("AboutView"),
       },
       {
-        path: "/signUp",
+        path: "signUp",
         name: "signUp",
         component: load("SignUp"),
       },
       {
-        path: "/signIn",
+        path: "signIn",
         name: "signIn",
         component: load("SignIn"),
       },
     ],
+    beforeEach: (to, from, next) => {
+      const locale = to.params.locale;
+      console.log(locale);
+      const supported_locales =
+        process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(","); // 2
+      if (!supported_locales.includes(locale)) return next("fr"); // 3
+      if (i18n.locale !== locale) {
+        i18n.locale = locale;
+      }
+      return next();
+    },
   },
   {
     path: "*",
     redirect() {
-      return process.env.VUE_APP_I18N_LOCALE;
+      return process.env.VUE_APP_I18N_LOCALE + "/home";
     },
   },
 ];
