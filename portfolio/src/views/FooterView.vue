@@ -107,4 +107,8 @@ h3 {
   max-width: 150px !important;
   margin-top: -10px !important;
 }
+
+.v-col {
+  margin-bottom: 0 !important;
+}
 </style>

@@ -28,8 +28,12 @@ export default {
           icon: "mdi-home-account",
         },
       ],
-      locale: "fr",
     };
+  },
+  computed: {
+    locale() {
+      return this.$i18n.locale;
+    },
   },
   methods: {
     switchLocale(locale) {
