@@ -20,32 +20,35 @@
       >
     </div>
     <div>
-      <v-row>
-        <v-col xs="12" sm="12" md="2">
-          <div>
+      <v-row class="mt-4">
+        <v-col cols="12" sm="6" md="2">
+          <div class="ml-4">
             <v-icon small>mdi-copyright</v-icon>
             <span>2022 MAXIME THIFAGNE</span>
           </div>
         </v-col>
-        <v-col xs="12" sm="12" md="2">
+        <v-col cols="12" sm="6" md="2">
           <div class="terms">
             <a class="uppercase">{{ $t("common.TERMS") }}</a>
           </div>
         </v-col>
-        <v-col xs="12" sm="12" md="2">
+        <v-col cols="12" sm="6" md="2">
           <div class="private">
             <a class="uppercase">{{ $t("common.PRIVACY") }}</a>
           </div>
         </v-col>
-        <v-col xs="12" sm="12" md="2">
+        <v-col cols="12" sm="6" md="2">
           <div class="cookies">
             <a class="uppercase">{{ $t("common.COOKIES") }}</a>
           </div>
         </v-col>
-        <v-col xs="12" sm="12" md="2">
+        <v-col cols="12" sm="6" md="2">
           <div class="siteplan">
             <a class="uppercase">{{ $t("common.PLAN") }}</a>
           </div>
+        </v-col>
+        <v-col cols="12" sm="6" md="2">
+          <LocaleSwitcher class="switcher" />
         </v-col>
       </v-row>
     </div>
@@ -53,7 +56,8 @@
 </template>
 
 <script>
-export default {};
+import LocaleSwitcher from "@/components/LocaleSwitcher.vue";
+export default { components: { LocaleSwitcher } };
 </script>
 
 <style lang="scss" scoped>
@@ -97,5 +101,10 @@ h3 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.switcher {
+  max-width: 150px !important;
+  margin-top: -10px !important;
 }
 </style>
