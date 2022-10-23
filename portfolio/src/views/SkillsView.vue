@@ -1,11 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="skills">
+    <h1>Skills</h1>
   </div>
 </template>
 
+<script>
+export default {};
+</script>
+
 <style lang="scss" scoped>
-.about {
+.skills {
   width: 100%;
   height: 100%;
   background-color: rgb(250, 244, 235);

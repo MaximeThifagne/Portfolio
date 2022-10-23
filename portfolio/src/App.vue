@@ -19,7 +19,7 @@
     </v-navigation-drawer>
 
     <v-app-bar app>
-      <span class="hidden-sm-and-up">
+      <span class="hidden-md-and-up">
         <v-app-bar-nav-icon @click="sidebar = !sidebar"> </v-app-bar-nav-icon>
       </span>
       <v-app-bar-title>
@@ -35,7 +35,7 @@
         </router-link>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-xs-only hidden-sm-only">
         <v-btn v-for="item in menuItems" :key="item.title" text :to="item.path">
           <v-icon left dark> {{ item.icon }}</v-icon>
           {{ $t("nav." + item.title) }}
@@ -66,14 +66,19 @@ export default {
           icon: "mdi-home",
         },
         {
-          title: "ABOUT",
-          path: { name: "about", params: { locale: this.$i18n.locale } },
-          icon: "mdi-facebook",
+          title: "PROJECT",
+          path: { name: "project", params: { locale: this.$i18n.locale } },
+          icon: "mdi-folder-account-outline",
+        },
+        {
+          title: "SKILLS",
+          path: { name: "skill", params: { locale: this.$i18n.locale } },
+          icon: "mdi-head-snowflake-outline",
         },
         {
           title: "SIGN_IN",
           path: { name: "signIn", params: { locale: this.$i18n.locale } },
-          icon: "mdi-facebook",
+          icon: "mdi-login",
         },
       ],
     };
@@ -115,7 +120,7 @@ nav {
   min-height: calc(100vh - 64px) !important;
 }
 
-.v-app-bar-title {
-  width: 150px !important;
+.v-app-bar-title__content {
+  width: inherit !important;
 }
 </style>

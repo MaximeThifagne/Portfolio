@@ -206,4 +206,16 @@ a:hover {
 a:visited {
   text-decoration: none;
 }
+
+@media screen and (max-width: 800px) {
+  .sign-up-card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sign-up-card {
+    width: 100%;
+  }
+}
 </style>

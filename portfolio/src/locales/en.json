@@ -3,7 +3,9 @@
     "HOME": "Home",
     "ABOUT": "About",
     "SIGN_UP" : "Register",
-    "SIGN_IN" : "Sign in"
+    "SIGN_IN" : "Sign in",
+    "PROJECT" : "projects",
+    "SKILLS" : "Skills"
   },
   "common" : {
       "EMAIL" : "Email",

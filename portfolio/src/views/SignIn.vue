@@ -180,4 +180,16 @@ a:hover {
 a:visited {
   text-decoration: none;
 }
+
+@media screen and (max-width: 800px) {
+  .sign-in-card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sign-in-card {
+    width: 100%;
+  }
+}
 </style>

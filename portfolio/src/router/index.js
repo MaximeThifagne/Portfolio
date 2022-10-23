@@ -18,10 +18,14 @@ const routes = [
         component: load("HomeView"),
       },
       {
-        path: "about",
-        name: "about",
-
-        component: load("AboutView"),
+        path: "project",
+        name: "project",
+        component: load("ProjectView"),
+      },
+      {
+        path: "skill",
+        name: "skill",
+        component: load("SkillsView"),
       },
       {
         path: "signUp",

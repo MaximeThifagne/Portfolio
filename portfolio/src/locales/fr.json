@@ -3,7 +3,9 @@
         "HOME": "Accueil",
         "ABOUT": "A propos",
         "SIGN_UP" : "S'enregistrer",
-        "SIGN_IN" : "Se connecter"
+        "SIGN_IN" : "Se connecter",
+        "PROJECT" : "Projets",
+        "SKILLS" : "Compétences"
     },
     "common" : {
         "EMAIL" : "Email",
