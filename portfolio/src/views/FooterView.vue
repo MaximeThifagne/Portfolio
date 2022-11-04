@@ -20,7 +20,7 @@
       >
     </div>
     <div>
-      <v-row class="mt-4">
+      <v-row class="mt-4 row-footer">
         <v-col cols="12" sm="6" md="2">
           <div class="ml-4">
             <v-icon small>mdi-copyright</v-icon>
@@ -108,7 +108,7 @@ h3 {
   margin-top: -10px !important;
 }
 
-.v-col {
+.row-footer {
   margin-bottom: 0 !important;
 }
 </style>

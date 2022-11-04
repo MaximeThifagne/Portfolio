@@ -12,15 +12,22 @@
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,0.3)"
                 height="200px"
               >
-                <v-expand-transition>
-                  <div
-                    v-if="hover"
-                    class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal text-h2 white--text"
-                    style="height: 100%"
-                  >
-                    Read more !
-                  </div>
-                </v-expand-transition>
+                <v-dialog v-model="dialog" width="500">
+                  <template #activator="{ on, attrs }">
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        v-bind="attrs"
+                        class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal text-h2 white--text"
+                        style="height: 100%"
+                        v-on="on"
+                      >
+                        Read more !
+                      </div>
+                    </v-expand-transition>
+                  </template>
+                  <ProjectDetail :detail="card.detail" />
+                </v-dialog>
                 <v-card-title v-text="card.title"></v-card-title>
               </v-img>
 
@@ -45,8 +52,10 @@
 </template>
 
 <script>
+import ProjectDetail from "../components/ProjectDetail.vue";
 export default {
   data: () => ({
+    dialog: false,
     cards: [
       {
         title: "Wekolo",
@@ -63,6 +72,13 @@ export default {
             color: "#1867c0",
           },
         ],
+        detail: {
+          title: "Wekolo",
+          date: {
+            start: "11/11/2019",
+            end: "12/11/2019",
+          },
+        },
       },
       {
         title: "Easily",
@@ -79,6 +95,13 @@ export default {
             color: "#1867c0",
           },
         ],
+        detail: {
+          title: "Easily",
+          date: {
+            start: "11/11/2019",
+            end: "12/11/2019",
+          },
+        },
       },
       {
         title: "AST groupe",
@@ -95,9 +118,17 @@ export default {
             color: "#1867c0",
           },
         ],
+        detail: {
+          title: "AST Groupe",
+          date: {
+            start: "11/11/2019",
+            end: "12/11/2019",
+          },
+        },
       },
     ],
   }),
+  components: { ProjectDetail },
 };
 </script>
 

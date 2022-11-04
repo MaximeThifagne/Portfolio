@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-navigation-drawer v-model="sidebar" app>
+    <v-navigation-drawer v-model="sidebar" disable-resize-watcher app>
       <v-list>
         <v-list-item
           v-for="item in menuItems"
@@ -82,6 +82,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    showSideBar() {
+      return !this.sidebar;
+    },
   },
 };
 </script>
