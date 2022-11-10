@@ -23,6 +23,11 @@ const routes = [
         component: load("ProjectView"),
       },
       {
+        path: "projectDetail/:id",
+        name: "projectDetail",
+        component: load("ProjectDetailView"),
+      },
+      {
         path: "skill",
         name: "skill",
         component: load("SkillsView"),
@@ -40,7 +45,6 @@ const routes = [
     ],
     beforeEach: (to, from, next) => {
       const locale = to.params.locale;
-      console.log(locale);
       const supported_locales =
         process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(","); // 2
       if (!supported_locales.includes(locale)) return next("fr"); // 3
@@ -59,7 +63,6 @@ const routes = [
 ];
 
 function load(component) {
-  console.log(component);
   return () => import(`../views/${component}.vue`);
 }
 

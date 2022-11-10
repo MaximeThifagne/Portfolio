@@ -1,0 +1,187 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Aéroport de paris",
+      "src": "adp.png",
+      "technologies": [
+        {
+          "icon": "mdi-language-csharp",
+          "color": "#702573"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Wekolo",
+      "src": "wekolo.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 3,
+      "title": "AST group",
+      "src": "ast.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 4,
+      "title": "AST group",
+      "src": "ast.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Hospice Civil Lyonnais",
+      "src": "easily.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Hospice Civil Lyonnais",
+      "src": "easily.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Hospice Civil Lyonnais",
+      "src": "easily.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Hospice Civil Lyonnais",
+      "src": "easily.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Hospice Civil Lyonnais",
+      "src": "easily.png",
+      "technologies": [
+        {
+          "icon": "mdi-vuejs",
+          "label": "Vuejs",
+          "color": "#42b883"
+        },
+        {
+          "icon": "mdi-vuetify",
+          "label": "Vuetify",
+          "color": "#1867c0"
+        }
+      ],
+      "date": {
+        "start": "11/11/2019",
+        "end": "12/11/2019"
+      }
+    }
+  ]
+}
